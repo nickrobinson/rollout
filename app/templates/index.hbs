@@ -1,6 +1,5 @@
 <div>
   <Navbar />
-
   <header class="bg-white shadow">
     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold leading-tight text-gray-900">
@@ -10,11 +9,51 @@
   </header>
   <main>
     <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <!-- Replace with your content -->
-      <div class="px-4 py-6 sm:px-0">
-        <div class="border-4 border-gray-200 border-dashed rounded-lg h-96"></div>
-      </div>
-      <!-- /End replace -->
+      <table class="w-full text-left border-collapse">
+        <!--Border collapse doesn't work on this site yet but it's available in newer tailwind versions -->
+        <thead>
+          <tr>
+            <th
+              class="px-6 py-4 text-sm font-bold uppercase border-b bg-grey-lightest text-grey-dark border-grey-light"
+            >
+              Title
+            </th>
+            <th
+              class="px-6 py-4 text-sm font-bold uppercase border-b bg-grey-lightest text-grey-dark border-grey-light"
+            >
+              Author
+            </th>
+            <th
+              class="px-6 py-4 text-sm font-bold uppercase border-b bg-grey-lightest text-grey-dark border-grey-light"
+            >
+              Operator
+            </th>
+            <th
+              class="px-6 py-4 text-sm font-bold uppercase border-b bg-grey-lightest text-grey-dark border-grey-light"
+            >
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each this.model.plans as |plan|}}
+          <tr class="hover:bg-grey-lighter">
+            <td class="px-6 py-4 border-b border-grey-light">
+              {{plan.title}}
+            </td>
+            <td class="px-6 py-4 border-b border-grey-light">
+              {{plan.author}}
+            </td>
+            <td class="px-6 py-4 border-b border-grey-light">
+              {{plan.operator}}
+            </td>
+            <td class="px-6 py-4 border-b border-grey-light">
+              <Badge @text={{plan.status}} />
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
   </main>
 </div>

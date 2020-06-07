@@ -5,4 +5,5 @@ export default class PlanModel extends Model {
   @attr title;
   @attr operator;
   @attr overview;
+  @attr status;
 }
