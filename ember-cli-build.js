@@ -13,6 +13,7 @@ module.exports = function(defaults) {
       compile: {
         enabled: true,
         plugins: [
+          require('postcss-import'),
           require("tailwindcss")("./app/styles/tailwind.config.js"),
           require("autoprefixer")
         ],
