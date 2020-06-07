@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: "emberconf2020-tailwindcss-best-practices",
+    modulePrefix: "rollout",
     environment,
     rootURL: "/",
     locationType: "auto",
