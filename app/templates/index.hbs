@@ -1,5 +1,4 @@
 <div>
-  <Navbar />
   <header class="bg-white shadow">
     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold leading-tight text-gray-900">
@@ -38,8 +37,8 @@
         <tbody>
           {{#each this.model.plans as |plan|}}
           <tr class="hover:bg-grey-lighter">
-            <td class="px-6 py-4 border-b border-grey-light">
-              {{plan.title}}
+            <td class="px-6 py-4 border-b border-grey-light ">
+              <LinkTo class="text-blue-500 hover:underline" @route="plan" @model={{plan.id}}>{{plan.title}}</LinkTo>
             </td>
             <td class="px-6 py-4 border-b border-grey-light">
               {{plan.author}}

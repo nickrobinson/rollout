@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-blue-500;
+}
+a:hover {
+  @apply underline;
+}
+
+
 nav.app a.active {
   @apply text-white bg-gray-900;
 }
