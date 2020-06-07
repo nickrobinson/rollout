@@ -1,0 +1,30 @@
+<div>
+  <header class="bg-white shadow">
+    <div class="flex justify-between px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold leading-tight text-gray-900">
+        {{args.plan.title}}
+      </h1>
+      {{#if isEditing}}
+        <button {{on "click" (fn this.save)}} class="btn btn-blue" disabled={{isSaveDisabled}}>Save</button>
+      {{else}}
+        <button {{on "click" (fn this.edit)}} class="btn btn-blue">Edit</button>
+      {{/if}}
+      
+    </div>
+  </header>
+  <main>
+    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <h1 class="font-bold leading-tight text-gray-900 underline">Overview</h1>
+      <div id="overview-body" class="pt-4">
+        {{#if isEditing}}
+          <TuiEditor
+            @value={{args.plan.overview}}
+            @onChange={{fn (mut args.plan.overview)}}
+          />
+        {{else}}
+          {{markdown-to-html args.plan.overview}}
+        {{/if}}
+      </div>
+    </div>
+  </main>
+</div>

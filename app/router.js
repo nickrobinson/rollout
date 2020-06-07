@@ -10,6 +10,5 @@ Router.map(function() {
   this.route('index', { path: '/' });
   this.route('plan',  function () {
     this.route('index', {path: '/:plan_slug'})
-    this.route('edit', {path: '/:plan_slug/edit'});
   });
 });

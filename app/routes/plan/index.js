@@ -7,7 +7,6 @@ export default class PlanRoute extends Route {
   store;
 
   model(params) {
-    console.log(params);
     return hash({
       plan: this.store.find('plan', params.plan_slug)
     })

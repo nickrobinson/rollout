@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    showdown: {
+      tables: true,
+    },
     modulePrefix: "rollout",
     environment,
     rootURL: "/",
