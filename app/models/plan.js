@@ -6,4 +6,7 @@ export default class PlanModel extends Model {
   @attr operator;
   @attr overview;
   @attr status;
+  @attr rollbackPlan;
+  @attr('date') start;
+  @attr('date') end;
 }

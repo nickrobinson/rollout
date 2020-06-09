@@ -26,5 +26,19 @@
         {{/if}}
       </div>
     </div>
+
+    <div class="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <h1 class="font-bold leading-tight text-gray-900 underline">Rollback Plan</h1>
+      <div id="overview-body" class="pt-4">
+        {{#if isEditing}}
+          <TuiEditor
+            @value={{args.plan.rollbackPlan}}
+            @onChange={{fn (mut args.plan.rollbackPlan)}}
+          />
+        {{else}}
+          {{markdown-to-html args.plan.rollbackPlan}}
+        {{/if}}
+      </div>
+    </div>
   </main>
 </div>
