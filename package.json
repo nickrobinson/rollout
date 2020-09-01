@@ -60,7 +60,7 @@
     "faker": "^4.1.0",
     "focus-visible": "^5.0.2",
     "loader.js": "^4.7.0",
-    "postcss-cli": "^7.1.0",
+    "postcss-cli": "^7.1.2",
     "qunit-dom": "^1.0.0",
     "tailwindcss": "^1.2.0"
   },
